@@ -1,44 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>newst2026</title>
+<title>ST Secret</title>
 <style>
-body{margin:0;font-family:Arial;background:#0f172a;color:white}
-.header{background:#111827;padding:16px;text-align:center;font-weight:bold}
-.container{padding:16px;padding-bottom:80px}
-.card{background:#1e293b;padding:16px;border-radius:16px;margin-bottom:16px}
-.navbar{position:fixed;bottom:0;width:100%;background:#111827;display:flex;justify-content:space-around;padding:12px 0}
-.navbar button{background:none;border:none;color:white;font-size:16px}
+body {
+  margin: 0;
+  background: radial-gradient(circle at center, #0a0a0f, #000);
+  color: #00f0ff;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  text-align: center;
+}
+
+#gojo {
+  position: absolute;
+  top: -300px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 90px;
+  animation: fall 2s ease-in forwards;
+}
+
+@keyframes fall {
+  0% { top: -300px; }
+  100% { top: 35%; }
+}
+
+#flash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+#passwordBox {
+  display: none;
+  margin-top: 20%;
+}
+
+input {
+  padding: 10px;
+  font-size: 18px;
+  background: black;
+  border: 2px solid #00f0ff;
+  color: #00f0ff;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background: #00f0ff;
+  border: none;
+}
+
+#menu {
+  display: none;
+  background: rgba(0,0,0,0.95);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 80px;
+}
+
+.option {
+  margin: 15px;
+  font-size: 22px;
+  padding: 10px;
+  border: 1px solid #00f0ff;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.option:hover {
+  background: #00f0ff;
+  color: black;
+}
 </style>
 </head>
+
 <body>
 
-<div class="header">🚀 newst2026</div>
+<div id="gojo">⚡</div>
+<div id="flash"></div>
 
-<div class="container" id="content">
-<div class="card">
-<h3>🔥 ข่าววันนี้</h3>
-<p>เว็บของคุณออนไลน์แล้ว</p>
-</div>
+<div id="passwordBox">
+  <h2>ใส่รหัส</h2>
+  <input type="password" id="pass">
+  <button onclick="checkPass()">เข้า</button>
 </div>
 
-<div class="navbar">
-<button onclick="home()">🏠 หน้าแรก</button>
-<button onclick="about()">ℹ️ เกี่ยวกับ</button>
+<div id="menu">
+  <h1>ST MENU</h1>
+  <div class="option">ช่วยลาก</div>
+  <div class="option">จอไว</div>
+  <div class="option">แก้เล็ค</div>
+  <div class="option">ลื่น</div>
+  <div class="option">SP</div>
+  <div class="option">ESP</div>
 </div>
+
+<audio id="thunder" src="https://www.soundjay.com/nature/thunder-01.mp3"></audio>
 
 <script>
-function home(){
-document.getElementById("content").innerHTML=
-'<div class="card"><h3>🏠 หน้าแรก</h3><p>นี่คือแอปมือถือของคุณ</p></div>';
-}
-function about(){
-document.getElementById("content").innerHTML=
-'<div class="card"><h3>ℹ️ เกี่ยวกับ</h3><p>สร้างฟรีด้วย GitHub Pages</p></div>';
+setTimeout(() => {
+  document.getElementById("flash").style.opacity = 1;
+  document.getElementById("thunder").play();
+  setTimeout(() => {
+    document.getElementById("flash").style.opacity = 0;
+    document.getElementById("passwordBox").style.display = "block";
+  }, 300);
+}, 2000);
+
+function checkPass() {
+  const pass = document.getElementById("pass").value;
+  if (pass === "ST") {
+    document.getElementById("menu").style.display = "block";
+  } else {
+    alert("รหัสผิด!");
+  }
 }
 </script>
 
 </body>
-</html>
+  </html>
