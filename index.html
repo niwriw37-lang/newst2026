@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>newst2026</title>
+<style>
+body{margin:0;font-family:Arial;background:#0f172a;color:white}
+.header{background:#111827;padding:16px;text-align:center;font-weight:bold}
+.container{padding:16px;padding-bottom:80px}
+.card{background:#1e293b;padding:16px;border-radius:16px;margin-bottom:16px}
+.navbar{position:fixed;bottom:0;width:100%;background:#111827;display:flex;justify-content:space-around;padding:12px 0}
+.navbar button{background:none;border:none;color:white;font-size:16px}
+</style>
+</head>
+<body>
+
+<div class="header">🚀 newst2026</div>
+
+<div class="container" id="content">
+<div class="card">
+<h3>🔥 ข่าววันนี้</h3>
+<p>เว็บของคุณออนไลน์แล้ว</p>
+</div>
+</div>
+
+<div class="navbar">
+<button onclick="home()">🏠 หน้าแรก</button>
+<button onclick="about()">ℹ️ เกี่ยวกับ</button>
+</div>
+
+<script>
+function home(){
+document.getElementById("content").innerHTML=
+'<div class="card"><h3>🏠 หน้าแรก</h3><p>นี่คือแอปมือถือของคุณ</p></div>';
+}
+function about(){
+document.getElementById("content").innerHTML=
+'<div class="card"><h3>ℹ️ เกี่ยวกับ</h3><p>สร้างฟรีด้วย GitHub Pages</p></div>';
+}
+</script>
+
+</body>
+  </html>
