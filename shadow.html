@@ -137,3 +137,25 @@ card.classList.toggle("active");
 
 </body>
 </html>
+<script>
+const sound = document.getElementById("sound");
+
+function enter(){
+let code=document.getElementById("code").value;
+if(code==="SP"){
+document.getElementById("login").style.display="none";
+document.getElementById("panel").style.display="block";
+sound.play(); // เล่นเสียงตอนกดเข้า
+}else{
+alert("Wrong Code");
+}
+}
+
+document.querySelectorAll(".card").forEach(card=>{
+card.addEventListener("click",()=>{
+sound.currentTime = 0;
+sound.play();
+card.classList.toggle("active");
+});
+});
+</script>
