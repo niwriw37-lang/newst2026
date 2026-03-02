@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>new2026</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0f0f0f;
+  color:white;
+}
+
+.header{
+  background:linear-gradient(90deg,#6a00ff,#9900ff);
+  padding:25px 20px;
+  text-align:center;
+  box-shadow:0 0 25px #9900ff;
+}
+
+.logo{
+  width:90px;
+  border-radius:20px;
+  margin-bottom:10px;
+  box-shadow:0 0 20px #b266ff;
+}
+
+.shop-name{
+  font-size:28px;
+  font-weight:bold;
+  letter-spacing:2px;
+}
+
+.container{
+  display:flex;
+  justify-content:center;
+  padding:40px 20px;
+}
+
+.card{
+  background:#1c1c1c;
+  width:350px;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 0 25px #9900ff;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.03);
+}
+
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.info{
+  padding:20px;
+}
+
+.price{
+  font-size:22px;
+  color:#ff3bff;
+  font-weight:bold;
+}
+
+.status{
+  color:#00ff99;
+}
+
+button{
+  width:100%;
+  margin-top:15px;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#8000ff;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#6600cc;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <img src="logo.png" class="logo">
+  <div class="shop-name">new2026 ID GAMES</div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <img src="freefire.jpg">
+    <div class="info">
+      <h3>ID : 7926061127</h3>
+      <p>Level 66</p>
+      <p class="price">3,299 ฿</p>
+      <p class="status">สถานะ : ยังอยู่</p>
+      <button>ดูรายละเอียด</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
